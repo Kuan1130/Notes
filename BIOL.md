@@ -7,7 +7,7 @@
 ## Module 3
 
 ## Module 4
-### Theories of Life, Microbes and Synthetic Biology\
+### 4_1 Theories of Life, Microbes and Synthetic Biology
 #### 1. Microorganisms: Definition & Types
 - Definition: Small living things that requires microscope to be seen (Include single-cell)
 - Prokaryotic microbes
@@ -100,3 +100,58 @@
 ### Future Directions
 - Synthetic yeast genome (Sc2.0)
 - Eukaryotic synthetic cells
+
+### 4_2 Symbiosis and Human Microbiome
+#### 1. Symbiosis: Definition & Classifications
+##### Definition
+- Living arrangements between two different species, called **symbionts**
+- Includes both positive and negative associations
+##### Three Main Types by Function
+1. **Mutualism** (+/+): Both benefit
+2. **Commensalism** (+/0): One benefits, other unaffected
+3. **Parasitism** (+/-): One benefits, other harmed
+##### Additional Classifications
+- **Need**: Obligate (required, entirely depend) vs. Facultative (optional, do not have to)
+- **Location**: Ectosymbiont (on surface) vs. Endosymbiont (inside)
+- <img src="images/BIOL/401.png" alt="description" width="350">
+#### 2. Mutualism Examples
+##### Corals and Symbiodinium
+- **Coral provides**: Inorganic waste metabolites
+- **Algae provides**: Organic nutrients **(glycerol, glucose)** via photosynthesis, serve as respiratory substrates, and support the growth can **calcium carbonate skeleton**
+- **Breakdown (Thermal Stress)** = Coral bleaching $\rightarrow$ death
+##### Clownfish and Sea Anemone
+- **Clownfish**: slimy mucus protects from nematocysts(stinging cells releasinng toxins)
+    - Benefits: Food scraps, protection, hiding place
+- **Anemone benefits**: 
+    - Benefites: Cleaned algae, prey luring, nitrogenous waste nutrients, scares anemone predators (Butterfly fish)
+##### Nitrogen-Fixing Bacteria and Leguminous Plants
+- **Bacteria (Rhizobium)**: Lives in root nodules, gets shelter, nutrients and water
+- **Plants**: Get fixed nitrogen (ammonia, nitrite, nitrate)
+- **Special adaptation**: 
+    - Leghemoglobin controls oxygen levels for nitrogenase, which is produced only when they are in symbiosis 
+    - Rhizobium needs some oxygen to generate energy for nitrogen fixation, yet its nitrogenase is inactivated by oxygen
+    - Rhizobium can only fix nitrogen independetly under microaerophilic condition
+    - A microaerophile is a microorganism that requires oxygen to survive, but requires environments containing lower levels of oxygen than that are present in the atmosphere
+##### Mycorrhiza (Fungi and Plants)
+- **Fungi benefites**: Sugars from roots
+- **Plants get**: Extended surface area for nutrient absorption (especially phosphorus)
+- **Example**: Truffles are ectomycorrhizae (Fungus and roots)
+#### 3. Endosynbiotic Theory: Origin of eukaryotes
+- Autogenous Model: Eukaryotic organelles evolved from internal membrane infoldings of ancestral prokaryotic cells, not symbiosis.
+    - Evidence: some species of cyanobacteria (e.g., Gloeocapsa) have complex internal membrane systems and resemble simple chloroplasts.
+- Endosymbiotic Theory: Organelles of eukaryotic cells are derived from symbiotic prokaryotes. Mitochondria in eukaryotes are descended from aerobic bacteria that were trapped by ancestral eukaryotic cells.
+    - Evidence: Double membrane oganelles, own DNA for proteins and enzymes, reproduce/replicate like bacteria (binary fission); Phylogenetic analysis shows bacterial ancestry (α-Proteobacteria/alphaproteobacteria)
+#### Commensalism Examples
+##### Barnacles and crab 
+- Barnacles: Obtains food debris from the crab and are carried from one place to another
+- Crab: Not benefited nor harmed
+- Lost when the crab molts
+##### Bacteria and bacteria
+- When the waste is other's substrate
+- **Nitrosomonas**: $\ce{NH3+ + 1.5 O2-> NO2- + H2O + 2H+}$
+- **Nitrobacter**: $\ce{NO2- + 0.5O2 ->NO3-}$
+#### Parasitism Examples
+##### Tapeworm in humans
+- **(Pork) Tapeworm benefits (in human or pig)**: Water, nutrients, shelter
+- **Human harmed**: Nutrient loss
+- **Pathogen**: Disease-producing microorganism
