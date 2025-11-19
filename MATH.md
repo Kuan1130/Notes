@@ -240,17 +240,14 @@ $$\text{Data} \rightarrow \boxed{\text{Encoder}} \rightarrow \text{Codeword/Enco
 <img src="images/MATH/901.png" alt="description" width="150">
 
 **1st iteration:**
-$$
-\begin{cases}
+$$\begin{cases}
 x_1 = 0\cdot x_1 + 0\cdot x_2 + 1\cdot x_3 + \dfrac{1}{2}\cdot x_4, \\
 x_2 = \dfrac{1}{3}\cdot x_1 + 0\cdot x_2 + 0\cdot x_3 + 0\cdot x_4, \\
 x_3 = \dfrac{1}{3}\cdot x_1 + \dfrac{1}{2}\cdot x_2 + 0\cdot x_3 + \dfrac{1}{2}\cdot x_4, \\
 x_4 = \dfrac{1}{3}\cdot x_1 + \dfrac{1}{2}\cdot x_2 + 0\cdot x_3 + 0\cdot x_4
-\end{cases}
-$$
+\end{cases}$$
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 x_1 \\ x_2 \\ x_3 \\ x_4
 \end{bmatrix}
 =
@@ -262,12 +259,10 @@ x_1 \\ x_2 \\ x_3 \\ x_4
 \end{bmatrix}
 \begin{bmatrix}
 x_1 \\ x_2 \\ x_3 \\ x_4
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 **k-th iteration:**
-$$
-\mathbf{x}^{[k]} =
+$$\mathbf{x}^{[k]} =
 \begin{bmatrix}
 x_1^{[k]} \\ x_2^{[k]} \\ x_3^{[k]} \\ x_4^{[k]}
 \end{bmatrix}
@@ -281,14 +276,12 @@ x_1^{[k]} \\ x_2^{[k]} \\ x_3^{[k]} \\ x_4^{[k]}
 \begin{bmatrix}
 x_1^{[k-1]} \\ x_2^{[k-1]} \\ x_3^{[k-1]} \\ x_4^{[k-1]}
 \end{bmatrix}
-= A\mathbf{x}^{[k-1]} = A^{k}\mathbf{x}^{[0]}
-$$
+= A\mathbf{x}^{[k-1]} = A^{k}\mathbf{x}^{[0]}$$
 
 - As $k \rightarrow \infty$, $\mathbf{x}^{[k]} \rightarrow \mathbf{v}$, where $\mathbf{v}$ is the **steady state**.
 
 **Steady state calculation:**
-$$
-\mathbf{x}^{(0)} =
+$$\mathbf{x}^{(0)} =
 \begin{bmatrix}
 1 \\ 1 \\ 1 \\ 1
 \end{bmatrix}, \quad
@@ -305,12 +298,10 @@ $$
 \rightarrow
 \begin{bmatrix}
 1.548 \\ 0.516 \\ 1.161 \\ 0.774
-\end{bmatrix} = \mathbf{v}
-$$
+\end{bmatrix} = \mathbf{v}$$
 
 **Normalization:**
-$$
-\mathbf{x}^{(0)} =
+$$\mathbf{x}^{(0)} =
 \begin{bmatrix}
 1 \\ 1 \\ 1 \\ 1
 \end{bmatrix}
@@ -319,8 +310,7 @@ $$
 \begin{bmatrix}
 1/n \\ 1/n \\ \vdots \\ 1/n
 \end{bmatrix}
-\quad \text{for normalization}
-$$
+\quad \text{for normalization}$$
 
 - Properties and problems of $A\mathbf{v} = \mathbf{v}$
     - I. Existence and Normalization: $A(k \mathbf{v}) = k\mathbf{v}$
