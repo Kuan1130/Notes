@@ -269,7 +269,7 @@ $$\text{Data} \rightarrow \boxed{\text{Encoder}} \rightarrow \text{Codeword/Enco
         x_1^{[k-1]} \\ x_2^{[k-1]} \\ x_3^{[k-1]} \\ x_4^{[k-1]}
         \end{bmatrix} = A\mathbf{x}^{[k-1]} = A^{[k]}\mathbf{x^[0]} 
     - as $k \rightarrow \infty, \mathbf{x}^{[k]} \rightarrow \mathbf{v}$, where $\mathbf{v}$ is the **"steady state"** 
-    -$$\text{If } \mathbf{x}^{(0)} =
+    - $$\text{If } \mathbf{x}^{(0)} =
         \begin{bmatrix}
         1 \\ 1 \\ 1 \\ 1
         \end{bmatrix}, \quad
@@ -287,9 +287,39 @@ $$\text{Data} \rightarrow \boxed{\text{Encoder}} \rightarrow \text{Codeword/Enco
         \begin{bmatrix}
         1.548 \\ 0.516 \\ 1.161 \\ 0.774
         \end{bmatrix} = \mathbf{v} $$
-    -$$\text{But we would not set }\mathbf{x}^{(0)} =
+    - $$\text{But we would not set }\mathbf{x}^{(0)} =
         \begin{bmatrix}
         1 \\ 1 \\ 1 \\ 1
-        \end{bmatrix}$$
+        \end{bmatrix} , \text{but }\mathbf{x}_{n \times 1}^{(0)} =
+        \begin{bmatrix}
+        1/n \\ 1/n \\ \vdots \\ 1/n
+        \end{bmatrix} \text{for normalization}$$
 
-
+- Properties and problems of $A\mathbf{v} = \mathbf{v}$
+    - I. Existence and Normalization: $A(k \mathbf{v}) = k\mathbf{v}$
+        - just as mentioned, $\mathbf{x}_{n \times 1}^{(0)} = \begin{bmatrix} 1/n,  1/n ,  \cdots ,  1/n \end{bmatrix}^T, \text{and all column sum to 1}$
+        - Note that $a_{ii} = 0, \text{at least ONE nonzero entry}, a_{ij} = \frac{|j \rightarrow i|}{|j \rightarrow ?|} \rightarrow \text{all column sum to 1}$
+        - Does it converges(Existence)?
+            - ***Limiting Scores theorem***
+            - **if the web is interconnected (VERY IMPORTANT)**
+                -  if it does not converges at k, then at k-1 it converges
+                - so $$\mathbf{v}^{[k]} := \frac{1}{k}(\sum_{i = 0}^{k-1} \mathbf{x}^{[i]})$$
+    - II. Nonnegativity: Are all entries of $\mathbf{v}$ nonnegative?
+    - III. Uniqueness: Is there $\mathbf{w} such that A\mathbf{v} = \mathbf{v} but \mathbf{v} \neq k\mathbf{v}$
+        - Yes, if there are dangling nodes (with 2 or more subwebs, we dont know which one is more important)
+    - *Link matrix is column-stochastic, but not positive*
+        - ***Column-Stochastic***: all entries nonnegative, each column sum to 1
+        - ***Positive***: All entries positive
+- Resolution: Considering someone would do "Random Surfing" and "Following hyperlinks"
+    - $M = (1-m)A + mS, 0 < m < 1$
+        - S represents "Random surfing", a n by n matrix with all entries equal to 1/n
+        - A, as mentioned, represents "Following hyperlinks"
+    - Properties of M (**Perron-Frobenius** Theorem), which Solves II and III
+        - I. If M is positive and column-stochastic, then any nonzero $M\mathbf{v} = \mathbf{v}$, all entries of $\mathbf{v}$ are either **positive** or **negative**
+        - II. If M is positive and column-stochastic, then for any $M\mathbf{v} = \mathbf{v}$,  $\mathbf{v} \in \{\mathbf{v}|k \mathbf{v} \}$
+    - Is Issue I solved?
+        - We know that $||x|| = 1, \text{then } ||Ax|| = 1$
+        - $||Mx|| = ||(1-m)Ax||+||mSx|| = (1-m)+m = 1$
+        - so Yes
+### Remarks
+- M is something cant see, A is something can see (in the formula)
