@@ -311,21 +311,6 @@ $$
 \end{bmatrix} = \mathbf{v}
 $$
 
-**Normalization**
-
-$$
-\mathbf{x}^{(0)} =
-\begin{bmatrix}
-1 \\ 1 \\ 1 \\ 1
-\end{bmatrix}
-\quad \text{is replaced by} \quad
-\mathbf{x}_{n \times 1}^{(0)} =
-\begin{bmatrix}
-1/n \\ 1/n \\ \vdots \\ 1/n
-\end{bmatrix}
-\quad \text{for normalization}
-$$
-
 - Properties and problems of $A\mathbf{v} = \mathbf{v}$
     - I. Existence and Normalization: $A(k \mathbf{v}) = k\mathbf{v}$
         - just as mentioned, $\mathbf{x}_{n \times 1}^{(0)} = \begin{bmatrix} 1/n,  1/n ,  \cdots ,  1/n \end{bmatrix}^T, \text{and all column sum to 1}$
