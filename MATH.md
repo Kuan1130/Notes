@@ -239,7 +239,7 @@ Let's say $i \rightarrow j$, then Page j should absorb the **Influence Power** o
 
 <img src="images/MATH/901.png" alt="description" width="150">
 
-1st iteration:
+**1st iteration**
 
 $$
 \begin{cases}
@@ -266,7 +266,7 @@ x_1 \\ x_2 \\ x_3 \\ x_4
 \end{bmatrix}
 $$
 
-k-th iteration:
+**k-th iteration**
 
 $$
 \mathbf{x}^{[k]} =
@@ -287,6 +287,8 @@ x_1^{[k-1]} \\ x_2^{[k-1]} \\ x_3^{[k-1]} \\ x_4^{[k-1]}
 $$
 
 As $k \rightarrow \infty$, $\mathbf{x}^{[k]} \rightarrow \mathbf{v}$, where $\mathbf{v}$ is the steady state.
+
+**Steady state calculation**
 
 $$
 \mathbf{x}^{(0)} =
@@ -309,7 +311,7 @@ $$
 \end{bmatrix} = \mathbf{v}
 $$
 
-Normalization:
+**Normalization**
 
 $$
 \mathbf{x}^{(0)} =
