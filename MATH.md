@@ -237,63 +237,71 @@ $$\text{Data} \rightarrow \boxed{\text{Encoder}} \rightarrow \text{Codeword/Enco
     - Rule 2. Higher Score if pointed by important pages
 - Lets say $i \rightarrow j$, then Page j should absorb the **Influence Power** of i
     - <img src="images/MATH/901.png" alt="description" width="150">
-    - $$\text{1-st iteration:} \begin{cases}
-        x'_{1} = 0\cdot x_{1} + 0\cdot x_{2} + 1\cdot x_{3} + \dfrac{1}{2}\cdot x_{4}, \\
-        x'_{2} = \dfrac{1}{3}\cdot x_{1} + 0\cdot x_{2} + 0\cdot x_{3} + 0\cdot x_{4}, \\
-        x'_{3} = \dfrac{1}{3}\cdot x_{1} + \dfrac{1}{2}\cdot x_{2} + 0\cdot x_{3} + \dfrac{1}{2}\cdot x_{4}, \\
-        x'_{4} = \dfrac{1}{3}\cdot x_{1} + \dfrac{1}{2}\cdot x_{2} + 0\cdot x_{3} + 0\cdot x_{4}. \end{cases} \implies \begin{bmatrix}
-        x'_{1} \\ x'_{2} \\ x'_{3} \\ x'_{4}
-        \end{bmatrix}
-        =
-        \begin{bmatrix}
-        0 & 0 & 1 & 0.5 \\
-        0.33 & 0 & 0 & 0 \\
-        0.33 & 0.5 & 0 & 0.5 \\
-        0.33 & 0.5 & 0 & 0
-        \end{bmatrix}
-        \begin{bmatrix}
-        x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
-        \end{bmatrix}$$
-    - $$\text{k-th iteration: } \mathbf{x}^{[k]} =
-        \begin{bmatrix}
-        x_{1}^{[k]} \\ x_{2}^{[k]} \\ x_{3}^{[k]} \\ x_{4}^{[k]}
-        \end{bmatrix}
-        =
-        \begin{bmatrix}
-        0 & 0 & 1 & 0.5 \\
-        0.33 & 0 & 0 & 0 \\
-        0.33 & 0.5 & 0 & 0.5 \\
-        0.33 & 0.5 & 0 & 0
-        \end{bmatrix}
-        \begin{bmatrix}
-        x_{1}^{[k-1]} \\ x_{2}^{[k-1]} \\ x_{3}^{[k-1]} \\ x_{4}^{[k-1]}
-        \end{bmatrix} = A\mathbf{x}^{[k-1]} = A^{[k]}\mathbf{x}^{[0]}$$
+    ```math
+    \text{1-st iteration:} \begin{cases}
+    x'_{1} = 0\cdot x_{1} + 0\cdot x_{2} + 1\cdot x_{3} + \dfrac{1}{2}\cdot x_{4}, \\
+    x'_{2} = \dfrac{1}{3}\cdot x_{1} + 0\cdot x_{2} + 0\cdot x_{3} + 0\cdot x_{4}, \\
+    x'_{3} = \dfrac{1}{3}\cdot x_{1} + \dfrac{1}{2}\cdot x_{2} + 0\cdot x_{3} + \dfrac{1}{2}\cdot x_{4}, \\
+    x'_{4} = \dfrac{1}{3}\cdot x_{1} + \dfrac{1}{2}\cdot x_{2} + 0\cdot x_{3} + 0\cdot x_{4}. \end{cases} \implies \begin{bmatrix}
+    x'_{1} \\ x'_{2} \\ x'_{3} \\ x'_{4}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0 & 0 & 1 & 0.5 \\
+    0.33 & 0 & 0 & 0 \\
+    0.33 & 0.5 & 0 & 0.5 \\
+    0.33 & 0.5 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+    \end{bmatrix}
+    ```
+    ```math
+    \text{k-th iteration: } \mathbf{x}^{[k]} =
+    \begin{bmatrix}
+    x_{1}^{[k]} \\ x_{2}^{[k]} \\ x_{3}^{[k]} \\ x_{4}^{[k]}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0 & 0 & 1 & 0.5 \\
+    0.33 & 0 & 0 & 0 \\
+    0.33 & 0.5 & 0 & 0.5 \\
+    0.33 & 0.5 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_{1}^{[k-1]} \\ x_{2}^{[k-1]} \\ x_{3}^{[k-1]} \\ x_{4}^{[k-1]}
+    \end{bmatrix} = A\mathbf{x}^{[k-1]} = A^{[k]}\mathbf{x}^{[0]} 
+    ```
     - as $k \rightarrow \infty, \mathbf{x}^{[k]} \rightarrow \mathbf{v}$, where $\mathbf{v}$ is the **"steady state"** 
-    - $$\text{If } \mathbf{x}^{(0)} =
-        \begin{bmatrix}
-        1 \\ 1 \\ 1 \\ 1
-        \end{bmatrix}, \quad
-        \mathbf{v} = A^k \mathbf{x}^{(0)} =
-        \begin{bmatrix}
-        0 & 0 & 1 & 0.5 \\
-        0.33 & 0 & 0 & 0 \\
-        0.33 & 0.5 & 0 & 0.5 \\
-        0.33 & 0.5 & 0 & 0
-        \end{bmatrix}^k
-        \begin{bmatrix}
-        1 \\ 1 \\ 1 \\ 1
-        \end{bmatrix}
-        \rightarrow
-        \begin{bmatrix}
-        1.548 \\ 0.516 \\ 1.161 \\ 0.774
-        \end{bmatrix} = \mathbf{v}$$
-    - $$\text{But we would not set }\mathbf{x}^{(0)} =
-        \begin{bmatrix}
-        1 \\ 1 \\ 1 \\ 1
-        \end{bmatrix} , \text{but }\mathbf{x}_{n \times 1}^{(0)} =
-        \begin{bmatrix}
-        1/n \\ 1/n \\ \vdots \\ 1/n
-        \end{bmatrix} \text{for normalization}$$
+    ```math
+    \text{If } \mathbf{x}^{(0)} =
+    \begin{bmatrix}
+    1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}, \quad
+    \mathbf{v} = A^k \mathbf{x}^{(0)} =
+    \begin{bmatrix}
+    0 & 0 & 1 & 0.5 \\
+    0.33 & 0 & 0 & 0 \\
+    0.33 & 0.5 & 0 & 0.5 \\
+    0.33 & 0.5 & 0 & 0
+    \end{bmatrix}^k
+    \begin{bmatrix}
+    1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+    \rightarrow
+    \begin{bmatrix}
+    1.548 \\ 0.516 \\ 1.161 \\ 0.774
+    \end{bmatrix} = \mathbf{v} 
+    ```
+    ```math
+    \text{But we would not set }\mathbf{x}^{(0)} =
+    \begin{bmatrix}
+    1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix} , \text{but }\mathbf{x}_{n \times 1}^{(0)} =
+    \begin{bmatrix}
+    1/n \\ 1/n \\ \vdots \\ 1/n
+    \end{bmatrix} \text{for normalization}
+    ```
 - Properties and problems of $A\mathbf{v} = \mathbf{v}$
     - I. Existence and Normalization: $A(k \mathbf{v}) = k\mathbf{v}$
         - just as mentioned, $\mathbf{x}_{n \times 1}^{(0)} = \begin{bmatrix} 1/n,  1/n ,  \cdots ,  1/n \end{bmatrix}^T, \text{and all column sum to 1}$
