@@ -141,17 +141,70 @@
     - Evidence: some species of cyanobacteria (e.g., Gloeocapsa) have complex internal membrane systems and resemble simple chloroplasts.
 - Endosymbiotic Theory: Organelles of eukaryotic cells are derived from symbiotic prokaryotes. Mitochondria in eukaryotes are descended from aerobic bacteria that were trapped by ancestral eukaryotic cells.
     - Evidence: Double membrane oganelles, own DNA for proteins and enzymes, reproduce/replicate like bacteria (binary fission); Phylogenetic analysis shows bacterial ancestry (α-Proteobacteria/alphaproteobacteria)
-#### Commensalism Examples
+#### 4. Commensalism Examples
 ##### Barnacles and crab 
 - Barnacles: Obtains food debris from the crab and are carried from one place to another
 - Crab: Not benefited nor harmed
 - Lost when the crab molts
 ##### Bacteria and bacteria
 - When the waste is other's substrate
-- **Nitrosomonas**: $\ce{NH3+ + 1.5 O2-> NO2- + H2O + 2H+}$
-- **Nitrobacter**: $\ce{NO2- + 0.5O2 ->NO3-}$
-#### Parasitism Examples
+- **Nitrosomonas**: $NH_3^+ + 1.5 O_2^-> NO_2^- + H_2O + 2H^+$
+- **Nitrobacter**: $NO_2^- + 0.5O_2 ->NO_3^-$
+#### 5. Parasitism Examples
 ##### Tapeworm in humans
 - **(Pork) Tapeworm benefits (in human or pig)**: Water, nutrients, shelter
 - **Human harmed**: Nutrient loss
 - **Pathogen**: Disease-producing microorganism
+#### 6. Human Microbiome
+##### Normal Microbiota
+- Microbes living in long-term symbiotic relationship with host
+- Found on all body surfaces (nose, mouth, skin, gut, vagina, etc.)
+- **Normal** = long-term vs. **Transient** = temporary (days/weeks)
+##### Factors Influencing Distribution
+- Host genetics, age, environment
+- Nutrients available
+- Physical/chemical factors (temperature, pH, O₂, salinity)
+- Mechanical factors (chewing, urine discharge)
+##### Benefits of Normal Microbiota (Mutualism)
+- **Probiotics**: Beneficial microbes (e.g., Lactobacillus)
+- Digest food, promote mucus secretion, produce vitamins (K, B)
+- **Microbial antagonism**: Normal flora inhibit pathogens
+  - Vaginal pH 4 inhibits Candida
+  - E. coli produces bacteriocins that inhibit Salmonella
+##### When Microbiota Becomes Harmful
+- **Opportunistic pathogens**: Normal flora cause disease in different environment
+- **Examples**:
+  - E. coli in urinary tract → infection
+  - Clostridium difficile overgrowth after antibiotics → diarrhea
+  - Candidiasis in immunocompromised patients
+#### 7. Germ-Free Research
+##### Gnotobiotic Animals
+- Bred in sterile environments
+- **Findings**: Can survive without microbes but have:
+  - Undeveloped immune systems
+  - Higher susceptibility to infection
+  - Need more calories and vitamins
+- Humans acquire microbiota within hours after birth
+#### 8. Human Microbiome Project (HMP)
+##### Overview
+- Launched 2008 by NIH
+- **Goal**: Study all microbes in/on human body
+- **Method**: Metagenomic sequencing (DNA from mixed communities without culturing)
+- **Samples**: 5,000+ from 242 healthy volunteers (nasal, oral, skin, GI, urogenital)
+##### Major Findings (2012)
+- >10,000 microbial species in human ecosystem
+- Microbial cells outnumber human cells 10:1
+- Bacterial genes 360× more abundant than human genes
+- Personalized microbiome for each individual
+- Same metabolic functions can be performed by different bacterial species
+#### 9. Medical Applications & Future Directions
+##### Fecal Microbiota Transplants
+- Treatment for inflammatory bowel diseases (Crohn's, colitis)
+- Restores healthy flora balance
+- Currently used because bacterial communities are too complex to replicate artificially
+##### Future Research Directions
+- Develop new metagenome analysis technologies
+- Associate specific microbes with health/disease states
+- Study roles in nutrition, immunity, disease
+- Longitudinal studies on microbiome changes
+- Ethical, legal, social implications
